@@ -52,6 +52,15 @@ then embedded Jetty server will run and deploy application to http://localhost:8
 
 ### Build frontend
 
+For auto building, move todo-client directory and
+
+```
+% make watch
+```
+
+then auto building process, that watching change on scirpt files and run build automatically, will start.
+Built results will be outputted to todo-app/src/main/resources/static directory.
+
 For manual build, move todo-client directory and
 
 ```
