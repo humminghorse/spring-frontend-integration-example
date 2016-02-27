@@ -24,7 +24,8 @@ This example is also a tutorial refered from http://blog.keik.info/2016/02/28/ja
     ├── Makefile
     ├── package.json
     └── scripts                      ... for sources of a JavaScript to bundle
-        └── main.js                  ... entry point of JavaScript
+        ├── main.js                  ... entry point of JavaScript
+        └── page-specifics           ... for store page-specific scripts
 ```
 
 

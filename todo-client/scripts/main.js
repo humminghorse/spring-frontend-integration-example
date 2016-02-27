@@ -2,6 +2,4 @@
  * load modules
  */
 
-var $ = require('jquery')
-
-console.log($().jquery)
+require('./page-specifics/todos')

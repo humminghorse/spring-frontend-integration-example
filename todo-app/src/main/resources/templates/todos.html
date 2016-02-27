@@ -4,29 +4,30 @@
     <meta charset="utf-8"/>
     <title>Todos</title>
   </head>
-  <body>
+  <body id="page-todos">
 
     <h1>Todos</h1>
 
-    <form id="new-todo-form" th:action="@{/todos}" method="post">
+    <form id="new-todo-form">
       <input type="text" name="title" placeholder="input a title for new todo"/>
     </form>
 
-    <ul th:remove="all-but-first">
-      <li th:each="todo : ${todos}">
+    <ul id="todos" th:remove="all-but-first">
+      <li class="todo" data-todo-id="1"
+          th:each="todo : ${todos}" th:attr="data-todo-id=${todo.id}">
         <input name="complete" type="checkbox" checked="checked" th:checked="${todo.complete}"/>
         <label th:text="${todo.title}">Task 1</label>
-        <button>×</button>
+        <button class="delete">×</button>
       </li>
-      <li>
+      <li class="todo" data-todo-id="2">
         <input name="complete" type="checkbox"/>
         <label>Task 2</label>
-        <button>×</button>
+        <button class="delete">×</button>
       </li>
-      <li>
+      <li class="todo" data-todo-id="3">
         <input name="complete" type="checkbox"/>
         <label>Task 3</label>
-        <button>×</button>
+        <button class="delete">×</button>
       </li>
     </ul>
 
