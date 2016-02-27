@@ -4,6 +4,8 @@ An example of integration between Spring Boot aplication and frontend developmen
 
 This example is also a tutorial refered from http://blog.keik.info/2016/02/28/java-with-frontend/ .
 
+![](./screenshot.png)
+
 
 ## Layout
 
