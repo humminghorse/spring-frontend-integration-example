@@ -18,14 +18,18 @@ This example is also a tutorial refered from http://blog.keik.info/2016/02/28/ja
 │          └── resources
 │              ├── application.yml
 │              ├── static
-│              │  └── bundle.js      ... built from todo-client/scripts/main.js
+│              │  ├── bundle.js      ... built from todo-client/scripts/main.js
+│              │  └── style.css      ... built from todo-client/styles/main.less
 │              └── templates
 └── todo-client                      ... for sources of client resources
     ├── Makefile
     ├── package.json
-    └── scripts                      ... for sources of a JavaScript to bundle
-        ├── main.js                  ... entry point of JavaScript
-        └── page-specifics           ... for store page-specific scripts
+    ├── scripts                      ... for sources of a JavaScript to bundle
+    │  ├── main.js                   ... entry point of JavaScript
+    │  └── page-specifics            ... for store page-specific scripts
+    └── styles                       ... for sources of a CSS to bundle
+        ├── main.less                ... entry point of CSS
+        └── page-specifics           ... for store page-specific styles
 ```
 
 
@@ -59,7 +63,7 @@ For auto building, move todo-client directory and
 % make watch
 ```
 
-then auto building process, that watching change on scirpt files and run build automatically, will start.
+then auto building process, that watching change on files (scripts and styles) and run build automatically, will start.
 Built results will be outputted to todo-app/src/main/resources/static directory.
 
 For manual build, move todo-client directory and

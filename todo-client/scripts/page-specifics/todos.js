@@ -88,7 +88,7 @@ function onChangeComplete(e) {
     method: 'PUT',
     data: {complete: $completeEl.prop('checked')}
   }).done(function(data, status, xhr) {
-    // no-op
+    $todoEl.toggleClass('completed', $completeEl.prop('checked'))
   }).fail(function(xhr, status, err) {
     $completeEl.prop('checked', !$completeEl.prop('checked'))
     alert(status)

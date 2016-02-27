@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <title>Todos</title>
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}"/>
   </head>
   <body id="page-todos">
 
@@ -12,9 +13,9 @@
       <input type="text" name="title" placeholder="input a title for new todo"/>
     </form>
 
-    <ul id="todos" th:remove="all-but-first">
-      <li class="todo" data-todo-id="1"
-          th:each="todo : ${todos}" th:attr="data-todo-id=${todo.id}">
+    <ul id="todos" class="todos" th:remove="all-but-first">
+      <li class="todo completed" data-todo-id="1"
+          th:each="todo : ${todos}" th:class="todo" th:classappend="${todo.complete} ? 'completed'" th:attr="data-todo-id=${todo.id}">
         <input name="complete" type="checkbox" checked="checked" th:checked="${todo.complete}"/>
         <label th:text="${todo.title}">Task 1</label>
         <button class="delete">×</button>
